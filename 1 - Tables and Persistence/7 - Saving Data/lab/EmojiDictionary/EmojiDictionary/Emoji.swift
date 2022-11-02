@@ -5,4 +5,7 @@ struct Emoji: Codable {
     var name: String
     var description: String
     var usage: String
+
+    
+    
 }

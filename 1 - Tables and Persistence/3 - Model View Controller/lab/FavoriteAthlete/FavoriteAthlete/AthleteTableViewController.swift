@@ -31,4 +31,38 @@ class AthleteTableViewController: UITableViewController {
         
         return cell
     }
+
+    @IBAction func unWind(_ segue: UIStoryboardSegue) {
+        guard
+            let athleteFormViewController =
+               segue.source as? AthleteFormViewController,
+            let athlete = athleteFormViewController.athlete
+        else {
+            return
+        }
+        if let selectedIndexPath = tableView.indexPathForSelectedRow {
+            athletes[selectedIndexPath.row] = athlete
+        } else {
+            athletes.append(athlete)
+        }
+
+    }
+    
+    
+    @IBSegueAction func addAthlete(_ coder: NSCoder) -> AthleteFormViewController? {
+        return AthleteFormViewController(coder: coder, athlete: nil)
+    }
+    
+    @IBSegueAction func editAthlete(_ coder: NSCoder, sender: Any?) -> AthleteFormViewController? {
+        let athleteToEdit: Athlete?
+        if let cell = sender as? UITableViewCell,
+            let indexPath = tableView.indexPath(for: cell) {
+            athleteToEdit = athletes[indexPath.row]
+        } else {
+            athleteToEdit = nil
+        }
+        return AthleteFormViewController(coder: coder, athlete: athleteToEdit)
+    }
+    
+    
 }

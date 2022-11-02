@@ -42,7 +42,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Jdx-qb-Jda" kind="show" identifier="EditAthlete" id="lBM-ky-b8A"/>
+                                    <segue destination="Jdx-qb-Jda" kind="show" identifier="EditAthlete" destinationCreationSelector="editAthlete:sender:" id="lBM-ky-b8A"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -54,7 +54,7 @@
                     <navigationItem key="navigationItem" title="My Favorite Athletes" id="HkE-HG-Ylf">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="sEp-s4-2KD">
                             <connections>
-                                <segue destination="Jdx-qb-Jda" kind="show" identifier="AddAthlete" id="wJO-3P-Bh6"/>
+                                <segue destination="Jdx-qb-Jda" kind="show" identifier="AddAthlete" destinationCreationSelector="addAthlete:" id="wJO-3P-Bh6"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -81,10 +81,10 @@
             </objects>
             <point key="canvasLocation" x="250" y="139"/>
         </scene>
-        <!--Athltete Form View Controller-->
+        <!--Athlete Form View Controller-->
         <scene sceneID="7QF-jC-5Vc">
             <objects>
-                <viewController id="Jdx-qb-Jda" customClass="AthlteteFormViewController" customModule="FavoriteAthlete" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Jdx-qb-Jda" customClass="AthleteFormViewController" customModule="FavoriteAthlete" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JTh-XC-suT">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -123,6 +123,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r8l-hP-2us">
                                 <rect key="frame" x="178" y="388" width="34" height="30"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButton:" destination="Jdx-qb-Jda" eventType="touchUpInside" id="v1Z-OP-VW7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1la-jA-Pb4"/>
@@ -139,15 +142,17 @@
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="vBG-05-QLL"/>
                     <connections>
-                        <outlet property="ageTextField" destination="5BH-RZ-lV3" id="1R7-Jn-nje"/>
-                        <outlet property="leagueTextField" destination="Qwm-lN-Kse" id="gYY-f1-HQF"/>
-                        <outlet property="nameTextField" destination="9Ms-Uu-Heg" id="VJo-C5-mAK"/>
-                        <outlet property="teamTextField" destination="uqw-ia-7EH" id="06a-T2-sLw"/>
+                        <outlet property="ageTextField" destination="5BH-RZ-lV3" id="430-jU-Lw4"/>
+                        <outlet property="leagueTextField" destination="Qwm-lN-Kse" id="wHh-2J-SN4"/>
+                        <outlet property="nameTextField" destination="9Ms-Uu-Heg" id="rKv-Zv-2fH"/>
+                        <outlet property="teamTextField" destination="uqw-ia-7EH" id="6P5-lz-HB8"/>
+                        <segue destination="FAk-gr-NbC" kind="unwind" identifier="unWind" unwindAction="unWind:" id="Fy7-xf-Ex0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JRJ-p2-DTp" sceneMemberID="firstResponder"/>
+                <exit id="FAk-gr-NbC" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1860" y="139"/>
+            <point key="canvasLocation" x="1860" y="138.6255924170616"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

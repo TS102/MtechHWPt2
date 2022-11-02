@@ -15,6 +15,7 @@
 		18DE987623C405490071ACD3 /* EmployeeListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DE987523C405490071ACD3 /* EmployeeListTableViewController.swift */; };
 		18DE987823C405550071ACD3 /* EmployeeDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DE987723C405540071ACD3 /* EmployeeDetailTableViewController.swift */; };
 		18DE987A23C406260071ACD3 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DE987923C406260071ACD3 /* Employee.swift */; };
+		3E852AE929102D9900B2D8F4 /* EmployeeTypeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E852AE829102D9900B2D8F4 /* EmployeeTypeTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		18DE987523C405490071ACD3 /* EmployeeListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListTableViewController.swift; sourceTree = "<group>"; };
 		18DE987723C405540071ACD3 /* EmployeeDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailTableViewController.swift; sourceTree = "<group>"; };
 		18DE987923C406260071ACD3 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
+		3E852AE829102D9900B2D8F4 /* EmployeeTypeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTypeTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +46,7 @@
 		18DE985523C405060071ACD3 = {
 			isa = PBXGroup;
 			children = (
+				3E852AE829102D9900B2D8F4 /* EmployeeTypeTableViewController.swift */,
 				18DE986023C405060071ACD3 /* EmployeeRoster */,
 				18DE985F23C405060071ACD3 /* Products */,
 			);
@@ -144,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18DE987823C405550071ACD3 /* EmployeeDetailTableViewController.swift in Sources */,
+				3E852AE929102D9900B2D8F4 /* EmployeeTypeTableViewController.swift in Sources */,
 				18DE986223C405060071ACD3 /* AppDelegate.swift in Sources */,
 				18DE986423C405060071ACD3 /* SceneDelegate.swift in Sources */,
 				18DE987A23C406260071ACD3 /* Employee.swift in Sources */,
