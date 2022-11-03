@@ -11,7 +11,7 @@ class FamilyInfoViewController: UIViewController {
 
     var familyInfo: FamilyInfo?
     
-    @IBOutlet weak var Image: UIImageView!
+  
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -20,10 +20,12 @@ class FamilyInfoViewController: UIViewController {
         self.familyInfo = familyInfo
         super.init(coder: aDecoder)
     }
-    // this is not working says init is not implemented
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    // this is not working says init is not implemented
+
     
     override func viewDidLoad() {
         super.viewDidLoad()

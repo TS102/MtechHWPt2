@@ -11,10 +11,10 @@ class FamilyTableViewController: UITableViewController {
 
 
     var familyMember: [Family] = [
-        Family(name: "Mom", familyInfo: [FamilyInfo(name: "Mom", description: "this is my mom", age: "41")]),
-        Family(name: "Dad", familyInfo: [FamilyInfo(name: "Dad", description: "This is my dad", age: "44")]),
-        Family(name: "brother", familyInfo: [FamilyInfo(name: "Brother", description: "this is my brother", age: "14")]),
-        Family(name: "Me", familyInfo: [FamilyInfo(name: "Me", description: "This is me", age: "20")])
+        Family(name: "Mom", familyInfo: [FamilyInfo(name: "Mom", description: "My Mom likes cats and cars.", age: "41")]),
+        Family(name: "Dad", familyInfo: [FamilyInfo(name: "Dad", description: "He looks like a UFC Fighter for some reason", age: "44")]),
+        Family(name: "brother", familyInfo: [FamilyInfo(name: "Brother", description: "He is a menace to society", age: "14")]),
+        Family(name: "Me", familyInfo: [FamilyInfo(name: "Me", description: "I am taking a mobile dev class", age: "20")])
     ]
     
     
@@ -41,7 +41,7 @@ class FamilyTableViewController: UITableViewController {
         return familyMember.count
     }
 
-    
+     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Family Cell", for: indexPath)
       
@@ -54,6 +54,15 @@ class FamilyTableViewController: UITableViewController {
         // Configure the cell...
 
         return cell
+    }
+    
+    
+// this segue will pull the info for and putting it into the view controller
+    @IBSegueAction func familyDetailSegue(_ coder: NSCoder) -> FamilyInfoViewController? {
+        
+        guard let selectedIndexPath = tableView.indexPathForSelectedRow else {return FamilyInfoViewController(coder: coder, familyInfo: nil)}
+        
+        return FamilyInfoViewController(coder: coder, familyInfo: familyMember[selectedIndexPath.row].familyInfo[0])
     }
     
 
