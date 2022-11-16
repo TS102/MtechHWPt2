@@ -11,7 +11,7 @@ class FoodTableViewController: UITableViewController {
     var meals: [Meal] = [
         Meal(name: "Breakfast", food: [Food(name: "Eggs & bacon", description: "scrambled eggs with bacon")]),
         Meal(name: "Lunch", food: [Food(name: "Burger & fries", description: "a cheeseburger and large fry from Five guys")]),
-        Meal(name: "Dinner", food: [Food(name: "chicken and pastat", description: "")])
+        Meal(name: "Dinner", food: [Food(name: "chicken and pasta", description: "")])
     ]
 
     

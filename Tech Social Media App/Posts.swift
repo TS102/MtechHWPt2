@@ -15,9 +15,4 @@ struct Posts {
     var image: UIImage
     var date: Date
 
-//    static var posts: [Posts] = [
-//        Posts(userName: "@Tyler", caption: "This is the very first post"),
-//        Posts(userName: "@Duolingo", caption: "you better be learning"),
-//        Posts(userName: "@fsf", caption: "this is a photo")
-//    ]
 }

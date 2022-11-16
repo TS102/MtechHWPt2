@@ -20,18 +20,15 @@ class BookTableViewController: UITableViewController {
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
-        return.delete
+        return .delete
     }
     
 
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // Delete the row from the data source
             books.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+            tableView.deleteRows(at: [indexPath], with: .automatic)
         }
     }
     
@@ -41,14 +38,10 @@ class BookTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BookCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BookCell", for: indexPath) as! BookTableViewCell
 
         let book = books[indexPath.row]
-        var content = cell.defaultContentConfiguration()
-        content.text = book.title
-        content.secondaryText = book.description
-        cell.contentConfiguration = content
-        cell.showsReorderControl = true
+        cell.update(with: book)
 
         return cell
     }

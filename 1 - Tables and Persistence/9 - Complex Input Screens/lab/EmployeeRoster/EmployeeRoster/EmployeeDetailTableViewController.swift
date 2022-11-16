@@ -12,7 +12,7 @@ class EmployeeDetailTableViewController: UITableViewController, UITextFieldDeleg
         employeeTypeLabel.text = "\(employeeType)"
         updateSaveButtonState()
     }
-    
+
 
     // MARK: outlet and properties
     var employeeType: EmployeeType?

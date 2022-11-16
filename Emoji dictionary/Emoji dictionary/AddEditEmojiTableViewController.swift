@@ -21,7 +21,7 @@ class AddEditEmojiTableViewController: UITableViewController {
         self.emoji = emoji
         super.init(coder: coder)
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -72,6 +72,5 @@ class AddEditEmojiTableViewController: UITableViewController {
         let usage = usageTextField.text ?? ""
         emoji = Emoji(symbol: symbol, name: name, description: description, usage: usage)
     }
-
 
 }

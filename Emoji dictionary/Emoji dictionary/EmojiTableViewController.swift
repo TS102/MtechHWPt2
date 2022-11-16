@@ -36,20 +36,6 @@ class EmojiTableViewController: UITableViewController {
         tableView.reloadData()
     }
 
-
-    @IBSegueAction func addEditEmoji(_ coder: NSCoder, sender: Any?) -> AddEditEmojiTableViewController? {
-        if let cell = sender as? UITableViewCell,
-           let indexPath = tableView.indexPath(for: cell) {
-            let emojiToEdit = emojis[indexPath.row]
-            return AddEditEmojiTableViewController(coder: coder,
-                                                   emoji: emojiToEdit)
-        } else {
-            return AddEditEmojiTableViewController(coder: coder,
-                                                   emoji: nil)
-        }
-    }
-    
-    // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return emojis.count
@@ -68,6 +54,21 @@ class EmojiTableViewController: UITableViewController {
         
     }
 
+
+    @IBSegueAction func addEditEmoji(_ coder: NSCoder, sender: Any?) -> AddEditEmojiTableViewController? {
+        if let cell = sender as? UITableViewCell,
+           let indexPath = tableView.indexPath(for: cell) {
+            let emojiToEdit = emojis[indexPath.row]
+            return AddEditEmojiTableViewController(coder: coder,
+                                                   emoji: emojiToEdit)
+        } else {
+            return AddEditEmojiTableViewController(coder: coder,
+                                                   emoji: nil)
+        }
+    }
+    
+    // MARK: - Table view data source
+
     @IBAction func unwindToEmojiTableView(segue: UIStoryboardSegue) {
         guard segue.identifier == "saveUnwind",
               let sourceViewController = segue.source as? AddEditEmojiTableViewController,
@@ -81,7 +82,6 @@ class EmojiTableViewController: UITableViewController {
             emojis.append(emoji)
             Emoji.saveToFile(emojis: emojis)
             tableView.insertRows(at: [newIndexPath], with: .automatic)
-            
         }
     }
 

@@ -218,7 +218,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="SCr-bB-b1a">
                             <connections>
-                                <segue destination="Kly-Ic-2Bj" kind="unwind" identifier="saveUnwind" unwindAction="unwindToEmojiTableViewWithSegue:" id="b3Q-l7-dcr"/>
+                                <segue destination="Kly-Ic-2Bj" kind="unwind" unwindAction="unwindToEmojiTableViewWithSegue:" id="b1y-Kg-ZwZ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
