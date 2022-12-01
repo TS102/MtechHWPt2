@@ -213,12 +213,12 @@
                     <navigationItem key="navigationItem" title="Root View Controller" id="vCe-ev-DvO">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="yhA-lC-iM7">
                             <connections>
-                                <segue destination="Kly-Ic-2Bj" kind="unwind" unwindAction="unwindToEmojiTableViewWithSegue:" id="gMi-18-16R"/>
+                                <segue destination="Kly-Ic-2Bj" kind="unwind" identifier="saveUnwind" unwindAction="unwindToEmojiTableViewWithSegue:" id="gMi-18-16R"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="SCr-bB-b1a">
                             <connections>
-                                <segue destination="Kly-Ic-2Bj" kind="unwind" unwindAction="unwindToEmojiTableViewWithSegue:" id="b1y-Kg-ZwZ"/>
+                                <segue destination="Kly-Ic-2Bj" kind="unwind" identifier="saveUnwind" unwindAction="unwindToEmojiTableViewWithSegue:" id="b1y-Kg-ZwZ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -269,7 +269,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="7OY-fN-lTi"/>
+        <segue reference="wQj-m6-gGp"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">

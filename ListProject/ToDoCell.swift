@@ -8,7 +8,6 @@
 import UIKit
 
 protocol ToDoCellDelegate: AnyObject {
-    
     func checkMarkTapped(sender: ToDoCell)
 }
 

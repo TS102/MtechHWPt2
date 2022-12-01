@@ -12,11 +12,11 @@ class ToDoTableViewController: UITableViewController, ToDoCellDelegate {
     var toDos = [ToDo]()
    
     func checkMarkTapped(sender: ToDoCell) {
-        if let indexPsth = tableView.indexPath(for: sender) {
-            var toDo = toDos[indexPsth.row]
+        if let indexPath = tableView.indexPath(for: sender) {
+            var toDo = toDos[indexPath.row]
             toDo.isComplete.toggle()
-            toDos[indexPsth.row] = toDo
-            tableView.reloadRows(at: [indexPsth], with: .automatic)
+            toDos[indexPath.row] = toDo
+            tableView.reloadRows(at: [indexPath], with: .automatic)
             ToDo.saveToDos(toDos)
         }
     }

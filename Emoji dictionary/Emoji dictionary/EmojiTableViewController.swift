@@ -42,6 +42,7 @@ class EmojiTableViewController: UITableViewController {
     }
 
 
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "EmojiCell", for: indexPath) as! EmojiTableViewCell
         
@@ -77,6 +78,7 @@ class EmojiTableViewController: UITableViewController {
         if let selectedIndexPath = tableView.indexPathForSelectedRow {
             emojis[selectedIndexPath.row] = emoji
             tableView.reloadRows(at: [selectedIndexPath], with: .none)
+            Emoji.saveToFile(emojis: emojis)
         } else {
             let newIndexPath = IndexPath(row: emojis.count, section: 0) // when hitting the save button when adding a new emoji this will save it and create a new cell for you to see.
             emojis.append(emoji)
@@ -97,12 +99,14 @@ class EmojiTableViewController: UITableViewController {
         if editingStyle == .delete {
             emojis.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: . automatic)
+            Emoji.saveToFile(emojis: emojis)
         }
     }
 
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
         let moveEmoji = emojis.remove(at: fromIndexPath.row)
         emojis.insert(moveEmoji, at: to.row)
+        Emoji.saveToFile(emojis: emojis)
     }
 
 }

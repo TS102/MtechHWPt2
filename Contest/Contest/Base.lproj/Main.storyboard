@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Contest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Enter an Email " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bys-eE-z0H">
+                                <rect key="frame" x="100" y="96" width="190" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wZ2-WB-bpf">
+                                <rect key="frame" x="116" y="266.33333333333331" width="158" height="34"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tVc-8r-xaO">
+                                <rect key="frame" x="108" y="484.33333333333331" width="175" height="34.999999999999943"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Submit"/>
+                                <connections>
+                                    <action selector="submitButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jgq-1v-5ex"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bys-eE-z0H" secondAttribute="trailing" constant="100" id="0K2-g9-OpC"/>
+                            <constraint firstItem="Bys-eE-z0H" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="49" id="7Xb-8w-tz9"/>
+                            <constraint firstItem="tVc-8r-xaO" firstAttribute="top" secondItem="wZ2-WB-bpf" secondAttribute="bottom" constant="184" id="EkU-9B-Wrq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tVc-8r-xaO" secondAttribute="trailing" constant="107" id="Laq-VS-yIw"/>
+                            <constraint firstItem="wZ2-WB-bpf" firstAttribute="top" secondItem="Bys-eE-z0H" secondAttribute="bottom" constant="150" id="OBx-7r-Xt2"/>
+                            <constraint firstItem="tVc-8r-xaO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="108" id="OO5-PE-CLz"/>
+                            <constraint firstItem="wZ2-WB-bpf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="116" id="kXw-xQ-WgM"/>
+                            <constraint firstItem="Bys-eE-z0H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="rYT-Im-eZz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wZ2-WB-bpf" secondAttribute="trailing" constant="116" id="x9s-nM-jJ3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="wZ2-WB-bpf" id="VVY-ci-bfY"/>
+                        <segue destination="3wa-fM-cSV" kind="show" identifier="EmailGood" id="SYr-bi-jwj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="110.76923076923076" y="3.5545023696682461"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="c7T-oM-fI5">
+            <objects>
+                <viewController id="3wa-fM-cSV" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Coo-Lj-kY9">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congrats you are in the contest!!!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tef-oe-DaI">
+                                <rect key="frame" x="70" y="359" width="250" height="68"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aJQ-2A-4fR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aJQ-2A-4fR" firstAttribute="trailing" secondItem="tef-oe-DaI" secondAttribute="trailing" constant="70" id="X7s-vY-9pi"/>
+                            <constraint firstItem="tef-oe-DaI" firstAttribute="leading" secondItem="aJQ-2A-4fR" secondAttribute="leading" constant="70" id="fRv-Sf-Jjk"/>
+                            <constraint firstItem="aJQ-2A-4fR" firstAttribute="bottom" secondItem="tef-oe-DaI" secondAttribute="bottom" constant="360" id="ona-fH-evA"/>
+                            <constraint firstItem="tef-oe-DaI" firstAttribute="top" secondItem="aJQ-2A-4fR" secondAttribute="top" constant="312" id="u4h-P1-1F3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="vuq-FZ-RSv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mYc-Mn-wvi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="916.92307692307691" y="3.5545023696682461"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
