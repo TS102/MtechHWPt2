@@ -14,6 +14,8 @@
 		18A6052923CF9803002037CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A6052723CF9803002037CA /* LaunchScreen.storyboard */; };
 		18A6053123CF9829002037CA /* StoreItemListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A6053023CF9829002037CA /* StoreItemListTableViewController.swift */; };
 		18A6053323CF9ADA002037CA /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A6053223CF9ADA002037CA /* ItemCell.swift */; };
+		3E6895462938FBF4000E50BC /* StoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6895452938FBF4000E50BC /* StoreItem.swift */; };
+		3E6895482938FC64000E50BC /* StoreItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6895472938FC64000E50BC /* StoreItemController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		18A6052A23CF9803002037CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18A6053023CF9829002037CA /* StoreItemListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreItemListTableViewController.swift; sourceTree = "<group>"; };
 		18A6053223CF9ADA002037CA /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		3E6895452938FBF4000E50BC /* StoreItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreItem.swift; sourceTree = "<group>"; };
+		3E6895472938FC64000E50BC /* StoreItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreItemController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				18A6052523CF9803002037CA /* Assets.xcassets */,
 				18A6052723CF9803002037CA /* LaunchScreen.storyboard */,
 				18A6052223CF9802002037CA /* Main.storyboard */,
+				3E6895452938FBF4000E50BC /* StoreItem.swift */,
+				3E6895472938FC64000E50BC /* StoreItemController.swift */,
 			);
 			path = iTunesSearch;
 			sourceTree = "<group>";
@@ -141,6 +147,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				18A6053323CF9ADA002037CA /* ItemCell.swift in Sources */,
+				3E6895462938FBF4000E50BC /* StoreItem.swift in Sources */,
+				3E6895482938FC64000E50BC /* StoreItemController.swift in Sources */,
 				18A6053123CF9829002037CA /* StoreItemListTableViewController.swift in Sources */,
 				18A6051D23CF9802002037CA /* AppDelegate.swift in Sources */,
 				18A6051F23CF9802002037CA /* SceneDelegate.swift in Sources */,

@@ -88,13 +88,13 @@ Task {
     }
 }
 
-//
-//
-//var urlComponents = URLComponents(string: "https://itunes.apple.com/search?")!
+
+
+//var urlComponents = URLComponents(string: "htjtps://itunes.apple.com/search?")!
 //urlComponents.queryItems = [
 //    "media": "movie",// for the query items you have to put the api names exactly how it is in the api website
-////    "limit": "2", // only shows results of the first five or whatever number you put in it.
-//    "term": "apple" // shows what you want to search in this case marvel movies
+//    "limit": "2", // only shows results of the first five or whatever number you put in it.
+//    "term": "avengers" // shows what you want to search in this case marvel movies
 //].map { URLQueryItem(name: $0.key, value: $0.value) } // map the query items so that you can get of the error that will appear.
 //
 //

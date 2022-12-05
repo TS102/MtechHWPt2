@@ -7,11 +7,12 @@ class StoreItemListTableViewController: UITableViewController {
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var filterSegmentedControl: UISegmentedControl!
     
+    var storeItemController = StoreItemController()
     // add item controller property
     
-    var items = [String]()
+    var items = [StoreItem]()
     var imageLoadTasks: [IndexPath: Task<Void, Never>] = [:]
-    
+
     let queryOptions = ["movie", "music", "software", "ebook"]
     
     override func viewDidLoad() {
@@ -30,27 +31,50 @@ class StoreItemListTableViewController: UITableViewController {
         if !searchTerm.isEmpty {
             
             // set up query dictionary
-            
+            let query = [
+                "term": searchTerm,
+                "media": mediaType,
+                "lang": "en_us"
+            ]
             // use the item controller to fetch items
             // if successful, use the main queue to set self.items and reload the table view
             // otherwise, print an error to the console
+            Task {
+                do {
+                    self.items = try await  storeItemController.fetchItems(matching: query)
+                    tableView.reloadData()
+                } catch {
+                    print(error)
+                }
+            }
         }
     }
     
     func configure(cell: ItemCell, forItemAt indexPath: IndexPath) {
         
         let item = items[indexPath.row]
-        
+
         // set cell.name to the item's name
-        
+        cell.name = item.title
         // set cell.artist to the item's artist
-        
+        cell.artist = item.director
         // set cell.artworkImage to nil
-        
+        cell.artworkImage = nil
         // initialize a network task to fetch the item's artwork keeping track of the task
         // in imageLoadTasks so they can be cancelled if the cell will not be shown after
         // the task completes.
-        //
+        imageLoadTasks[indexPath] = Task {
+            do {
+                cell.artworkImage = try await storeItemController.fetchImage(from: item.artWorkUrl)
+            } catch {
+                print(error)
+            }
+ 
+            
+            
+            
+            imageLoadTasks[indexPath] = nil
+        }
         // if successful, set the cell.artworkImage using the returned image
     }
     
