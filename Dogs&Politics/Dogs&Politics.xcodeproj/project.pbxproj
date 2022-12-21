@@ -16,6 +16,8 @@
 		3E3CF3B0293A4ED7007D5F73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E3CF3AE293A4ED7007D5F73 /* LaunchScreen.storyboard */; };
 		3E3CF3B8293A575B007D5F73 /* RepresentativesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3CF3B7293A575B007D5F73 /* RepresentativesTableViewController.swift */; };
 		3E3CF3BA293A5913007D5F73 /* RepresentativesableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3CF3B9293A5913007D5F73 /* RepresentativesableViewCell.swift */; };
+		3ED7ABB0293E54F200BE5C00 /* RepresentativesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED7ABAF293E54F200BE5C00 /* RepresentativesController.swift */; };
+		3ED7ABB2293E56A500BE5C00 /* RepsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED7ABB1293E56A500BE5C00 /* RepsItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		3E3CF3B1293A4ED7007D5F73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E3CF3B7293A575B007D5F73 /* RepresentativesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepresentativesTableViewController.swift; sourceTree = "<group>"; };
 		3E3CF3B9293A5913007D5F73 /* RepresentativesableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepresentativesableViewCell.swift; sourceTree = "<group>"; };
+		3ED7ABAF293E54F200BE5C00 /* RepresentativesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepresentativesController.swift; sourceTree = "<group>"; };
+		3ED7ABB1293E56A500BE5C00 /* RepsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepsItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,10 +50,9 @@
 		3E3CF397293A4ED5007D5F73 = {
 			isa = PBXGroup;
 			children = (
-				3E3CF3B9293A5913007D5F73 /* RepresentativesableViewCell.swift */,
-				3E3CF3B7293A575B007D5F73 /* RepresentativesTableViewController.swift */,
-				3E3CF3A7293A4ED5007D5F73 /* ViewController.swift */,
 				3E36226C293DA6E0001F1436 /* DogController.swift */,
+				3ED7ABB1293E56A500BE5C00 /* RepsItem.swift */,
+				3ED7ABAF293E54F200BE5C00 /* RepresentativesController.swift */,
 				3E3CF3A2293A4ED5007D5F73 /* Dogs&Politics */,
 				3E3CF3A1293A4ED5007D5F73 /* Products */,
 			);
@@ -66,6 +69,9 @@
 		3E3CF3A2293A4ED5007D5F73 /* Dogs&Politics */ = {
 			isa = PBXGroup;
 			children = (
+				3E3CF3B7293A575B007D5F73 /* RepresentativesTableViewController.swift */,
+				3E3CF3B9293A5913007D5F73 /* RepresentativesableViewCell.swift */,
+				3E3CF3A7293A4ED5007D5F73 /* ViewController.swift */,
 				3E3CF3A3293A4ED5007D5F73 /* AppDelegate.swift */,
 				3E3CF3A5293A4ED5007D5F73 /* SceneDelegate.swift */,
 				3E3CF3A9293A4ED5007D5F73 /* Main.storyboard */,
@@ -149,8 +155,10 @@
 			files = (
 				3E3CF3A8293A4ED5007D5F73 /* ViewController.swift in Sources */,
 				3E3CF3A4293A4ED5007D5F73 /* AppDelegate.swift in Sources */,
+				3ED7ABB2293E56A500BE5C00 /* RepsItem.swift in Sources */,
 				3E3CF3B8293A575B007D5F73 /* RepresentativesTableViewController.swift in Sources */,
 				3E3CF3BA293A5913007D5F73 /* RepresentativesableViewCell.swift in Sources */,
+				3ED7ABB0293E54F200BE5C00 /* RepresentativesController.swift in Sources */,
 				3E36226D293DA6E0001F1436 /* DogController.swift in Sources */,
 				3E3CF3A6293A4ED5007D5F73 /* SceneDelegate.swift in Sources */,
 			);

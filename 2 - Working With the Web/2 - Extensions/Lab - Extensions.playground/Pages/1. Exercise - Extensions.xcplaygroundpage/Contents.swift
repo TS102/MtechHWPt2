@@ -3,19 +3,25 @@
  
  Define an extension to `Character` that includes a function `isVowel()`. The function returns `true` if the character is a vowel (a,e,i,o,u), and `false` otherwise. Be sure to properly handle uppercase and lowercase characters.
  */
+
 extension Character {
-    func isVowel() -> Bool{
-        if self == Character("a,e,i,o,u") {
-                return true
-        }
-        return false
+    func isVowel() -> Bool {
+
+        let vowels: Set<Character> = ["a", "e", "i", "o", "u"]
+
+
+        return vowels.contains(self)
     }
 }
+
 //:  Create two `Character` constants, `myVowel` and `myConsonant`, and set them to a vowel and a consonant, respectively. Use the `isVowel()` methods on each constant to determine whether or not it's a vowel.
-    let myVowell: Character = "a"
-myVowell.isVowel()
-let myConsonant: Character = "c"
-myConsonant.isVowel()
+
+let myVowel: Character = "a"
+myVowel.isVowel()
+let myconsonant: Character = "z"
+myconsonant.isVowel()
+
+ 
 //:  Create a `Rectangle` struct with two variable properties, `length` and `width`, both of type `Double`. Below the definition, write an extension to `Rectangle` that includes a function, `halved()`. This function returns a new `Rectangle` instance with half the length and half the width of the original rectangle.
 struct Rectangle {
 var length: Int

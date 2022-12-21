@@ -71,8 +71,6 @@ class StoreItemListTableViewController: UITableViewController {
             }
  
             
-            
-            
             imageLoadTasks[indexPath] = nil
         }
         // if successful, set the cell.artworkImage using the returned image

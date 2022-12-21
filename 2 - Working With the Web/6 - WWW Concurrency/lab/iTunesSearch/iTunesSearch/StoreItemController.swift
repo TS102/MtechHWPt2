@@ -34,7 +34,7 @@ class StoreItemController {
             let decoder = JSONDecoder()
             let searchResponse = try decoder.decode(SearchResponse.self,
                from: data)
-
+        
             return searchResponse.results
     }
     

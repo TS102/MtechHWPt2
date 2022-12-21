@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zh0-yI-b6b">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -18,35 +17,44 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PYH-Wy-Ayg">
-                                <rect key="frame" x="99" y="404.66666666666669" width="192" height="34.666666666666686"/>
+                                <rect key="frame" x="125" y="507" width="140" height="181"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" systemColor="systemYellowColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="New Dog">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="29"/>
-                                </buttonConfiguration>
+                                <buttonConfiguration key="configuration" style="plain" image="download-1"/>
                                 <connections>
                                     <action selector="newDogButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dTs-9R-nad"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6bD-D1-9TD">
-                                <rect key="frame" x="60" y="96.999999999999986" width="270" height="207.66666666666663"/>
+                                <rect key="frame" x="36" y="63" width="318" height="288"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press For New Doge" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8HS-8B-0F3">
+                                <rect key="frame" x="80" y="583" width="230" height="29"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="1" green="0.89907833299999995" blue="0.81751142119999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PYH-Wy-Ayg" secondAttribute="bottom" constant="321.66666666666669" id="DIe-1I-4Y3"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6bD-D1-9TD" secondAttribute="trailing" constant="60" id="Lds-Eq-5vO"/>
-                            <constraint firstItem="6bD-D1-9TD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="MrS-Oe-5bD"/>
-                            <constraint firstItem="PYH-Wy-Ayg" firstAttribute="top" secondItem="6bD-D1-9TD" secondAttribute="bottom" constant="100" id="YU7-8B-lKt"/>
-                            <constraint firstItem="6bD-D1-9TD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="b8P-zj-so7"/>
-                            <constraint firstItem="PYH-Wy-Ayg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="99" id="gZt-wB-FtU"/>
-                            <constraint firstItem="PYH-Wy-Ayg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lKF-oc-Pem"/>
-                            <constraint firstItem="PYH-Wy-Ayg" firstAttribute="centerX" secondItem="6bD-D1-9TD" secondAttribute="centerX" id="zu4-Zk-buE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PYH-Wy-Ayg" secondAttribute="bottom" constant="73" id="1tM-mY-qf0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PYH-Wy-Ayg" secondAttribute="trailing" constant="125" id="2jr-56-qlu"/>
+                            <constraint firstItem="6bD-D1-9TD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="Qmh-5g-WW1"/>
+                            <constraint firstItem="PYH-Wy-Ayg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="125" id="Re6-cW-4WI"/>
+                            <constraint firstItem="PYH-Wy-Ayg" firstAttribute="top" secondItem="6bD-D1-9TD" secondAttribute="bottom" constant="156" id="SN4-I8-iYL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6bD-D1-9TD" secondAttribute="trailing" constant="36" id="WSs-gO-lhr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PYH-Wy-Ayg" secondAttribute="trailing" constant="125" id="Xej-Ak-baw"/>
+                            <constraint firstItem="8HS-8B-0F3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="Xoh-wh-ban"/>
+                            <constraint firstItem="6bD-D1-9TD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="bwB-aF-coM"/>
+                            <constraint firstItem="8HS-8B-0F3" firstAttribute="centerX" secondItem="PYH-Wy-Ayg" secondAttribute="centerX" id="d2d-n7-Unv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8HS-8B-0F3" secondAttribute="bottom" constant="149" id="rAE-fh-YnZ"/>
+                            <constraint firstItem="PYH-Wy-Ayg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="125" id="u6l-5a-O0x"/>
+                            <constraint firstItem="8HS-8B-0F3" firstAttribute="centerY" secondItem="PYH-Wy-Ayg" secondAttribute="centerY" id="yg0-y8-u31"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="ShK-B3-dOT"/>
+                    <tabBarItem key="tabBarItem" title="Item" selectedImage="pawprint.fill" catalog="system" id="ShK-B3-dOT"/>
                     <connections>
                         <outlet property="dogImage" destination="6bD-D1-9TD" id="GOk-0i-V1D"/>
                     </connections>
@@ -72,15 +80,15 @@
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="representatives" rowHeight="197" id="jax-bU-yiC" customClass="RepresentativesableViewCell" customModule="Dogs_Politics" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="94" width="390" height="197"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="representatives" rowHeight="132" id="jax-bU-yiC" customClass="RepresentativesableViewCell" customModule="Dogs_Politics" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="94" width="390" height="132"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jax-bU-yiC" id="Xwk-JU-4Ms">
-                                    <rect key="frame" x="0.0" y="0.0" width="390" height="197"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="132"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="7e4-Ix-3Jj">
-                                            <rect key="frame" x="38" y="36" width="156" height="127"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="7e4-Ix-3Jj">
+                                            <rect key="frame" x="85" y="14" width="156" height="107"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="ilasjdfkljsdfjajfa'ksjfa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hat-3L-LDD">
                                                     <rect key="frame" x="0.0" y="0.0" width="156" height="20.333333333333332"/>
@@ -89,13 +97,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="sfaskflasfa'sjflas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rlh-wO-07a">
-                                                    <rect key="frame" x="0.0" y="53.333333333333336" width="156" height="20.333333333333336"/>
+                                                    <rect key="frame" x="0.0" y="43.333333333333336" width="156" height="20.333333333333336"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XgV-Wd-QGw">
-                                                    <rect key="frame" x="0.0" y="106.66666666666667" width="156" height="20.333333333333329"/>
+                                                    <rect key="frame" x="0.0" y="86.666666666666671" width="156" height="20.333333333333329"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -105,9 +113,9 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="linkLabel" destination="XgV-Wd-QGw" id="yb1-qN-u9N"/>
-                                    <outlet property="partyLabel" destination="Rlh-wO-07a" id="zKN-E7-DxU"/>
-                                    <outlet property="repName" destination="Hat-3L-LDD" id="KpZ-It-GVp"/>
+                                    <outlet property="linkLabel" destination="XgV-Wd-QGw" id="K7k-H5-gYO"/>
+                                    <outlet property="partyLabel" destination="Rlh-wO-07a" id="9ux-B1-LBZ"/>
+                                    <outlet property="repsNameLabel" destination="Hat-3L-LDD" id="ipM-Tq-Cx9"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -116,7 +124,7 @@
                             <outlet property="delegate" destination="WEY-iA-Hqp" id="gmX-sb-wic"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="vbS-7f-T0V"/>
+                    <tabBarItem key="tabBarItem" title="Item" selectedImage="star.fill" catalog="system" id="vbS-7f-T0V"/>
                     <connections>
                         <outlet property="searchBar" destination="L0A-oV-7gk" id="PGh-Ry-DVc"/>
                     </connections>
@@ -131,6 +139,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="zh0-yI-b6b" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="R6j-fO-Nnb">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -145,6 +154,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="download-1" width="301" height="167"/>
+        <image name="pawprint.fill" catalog="system" width="128" height="112"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -8,21 +8,27 @@
 import UIKit
 
 class RepresentativesableViewCell: UITableViewCell {
-
-    @IBOutlet weak var repName: UILabel!
+    
+    @IBOutlet weak var repsNameLabel: UILabel!
     @IBOutlet weak var partyLabel: UILabel!
     @IBOutlet weak var linkLabel: UILabel!
+    
+
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+    
+//    override func updateConfiguration(using state: UICellConfigurationState) {
+//        var content = defaultContentConfiguration().updated(for: state)
+//
+//        repsNameLabel.text = name
+//        partyLabel.text = party
+//        linkLabel.text = link
+//
+//
+//
+//    }
 
 }

@@ -40,7 +40,7 @@ class DogController {
     }
     
     func fetchItems() async throws -> DogItem {
-        var url = URL(string: "https://dog.ceo/api/breeds/image/random")!
+        let url = URL(string: "https://dog.ceo/api/breeds/image/random")!
         
         let (data, response) = try await URLSession.shared.data(from: url)
     
@@ -51,6 +51,7 @@ class DogController {
         
         let jsonDecoder = JSONDecoder()
         let photo = try jsonDecoder.decode(DogItem.self, from: data)
+        print(photo)
         return photo
         
     }
