@@ -25,15 +25,15 @@ struct Emoji: Codable {
     }
 
     static func loadFromFile() -> [Emoji]{
-        let data = try! Data(contentsOf: emojiURl)
-        do {
-            return try JSONDecoder().decode([Emoji].self, from: data)
-        } catch {
-            print(error)
+//        let data = try! Data(contentsOf: emojiURl)
+//        do {
+//            return try JSONDecoder().decode([Emoji].self, from: data)
+//        } catch {
+//            print(error)
             return []
         }
        
     }
     
-}
+
 
