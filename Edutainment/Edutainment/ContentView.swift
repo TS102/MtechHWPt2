@@ -15,16 +15,15 @@ struct ContentView: View {
     @State private var amountOfQuestions = 5 // binds with picker
     let questionOptions = [5, 10, 20]
     
-    @State private var questionLimit = 0
+    @State private var questionCount = 0
     @State private var choices = [Int]()
-    @State private var correctAnswer = 0
+    @State private var correctAnswer = Int()
     @State private var points = 0
     @State private var gameLimit = false
     @State private var isVisble = false
 
     var body: some View {
         VStack {
-            Form {
                 HStack {
                     Stepper("Choose difficulty", value: $difficulty, in: 2...12)
                     Text("\(difficulty)")
@@ -39,19 +38,24 @@ struct ContentView: View {
                         }
                     }.pickerStyle(.segmented)
 
-                    VStack {
+                    VStack(spacing: 200) {
                         Text("What is \(num1) * \(num2)")
                         
-                        Spacer()
-                        
-                        ForEach(choices, id: \.self) { num in
-                            Button {
-                                withAnimation {
-                                   numberTapped(num)
+                        HStack(spacing: 50) {
+                            ForEach(choices, id: \.self) { num in
+                                Button {
+                                    withAnimation {
+                                        numberTapped(num)
+                                        questionCount += 1
+                                        print(questionCount)
+                                    }
+                                } label: {
+                                    Text("\(num)")
+                                        .font(.largeTitle)
+                                        .foregroundColor(.cyan)
+                                        .frame(width: 50, height: 50)
+                                        .clipShape(Circle())
                                 }
-                            } label: {
-                                Text("\(num)")
-                                    .frame(width: 50, height: 50)
                             }
                         }
                     }
@@ -75,7 +79,6 @@ struct ContentView: View {
                 } message: {
                     Text("you score was \(points)")
                 }
-            }
         }
     }
     
@@ -94,44 +97,29 @@ struct ContentView: View {
             choices.append(correctAnswer)
         }
             optionsGenerator()
-            
-    }
-    
-    func buttonTapped(num: Int) {
-        questionLimit += 1
-        if num == correctAnswer {
-            points += 1
-            choices.removeAll()
-            options()
-        } else {
-            choices.removeAll()
-            points -= 1
-            options()
-        }
-        if amountOfQuestions == questionLimit {
-            gameLimit = true
-        }
     }
     
     func numberTapped(_ num: Int) {
-        questionLimit += 1
         
         if num == correctAnswer {
+            choices.removeAll()
             points += 1
-            choices.removeAll()
+            print("correct")
             options()
-        } else {
+        } else if num != correctAnswer {
             choices.removeAll()
+            print("wrong")
             options()
+
         }
-        if amountOfQuestions == questionLimit {
+        if amountOfQuestions == questionCount {
             gameLimit = true
         }
     }
     
     func resetGame() {
         points = 0
-        questionLimit = 0
+        questionCount = 0
         choices.removeAll()
         isVisble.toggle()
     }

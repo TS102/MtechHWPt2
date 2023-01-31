@@ -85,6 +85,14 @@ class Database {
         return _billsLookup[id]
     }
     
+    
+    func getBillAgain(with notificationID: String) -> Bill? {
+        guard let keyValue = _billsLookup.first(where: { $0.value.notificationID == notificationID }) else {
+            return nil
+        }
+        return keyValue.value
+    }
+    
 }
 
 extension Bill: Comparable {

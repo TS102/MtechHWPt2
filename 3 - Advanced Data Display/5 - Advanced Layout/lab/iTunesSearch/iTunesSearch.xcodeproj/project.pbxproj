@@ -20,6 +20,9 @@
 		18A6053323CF9ADA002037CA /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A6053223CF9ADA002037CA /* ItemTableViewCell.swift */; };
 		18A6053523CFABBB002037CA /* StoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A6053423CFABBB002037CA /* StoreItem.swift */; };
 		18A6053723CFABDC002037CA /* StoreItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A6053623CFABDC002037CA /* StoreItemController.swift */; };
+		3E5937A229836E810028C320 /* StoreItemTableViewDiffableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5937A129836E810028C320 /* StoreItemTableViewDiffableDataSource.swift */; };
+		3E5937A42983711B0028C320 /* StoreItemCollectionViewSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5937A32983711B0028C320 /* StoreItemCollectionViewSectionHeader.swift */; };
+		3E8EEEF22982DEB0005C7212 /* SearchScope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8EEEF12982DEAF005C7212 /* SearchScope.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		18A6053223CF9ADA002037CA /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		18A6053423CFABBB002037CA /* StoreItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreItem.swift; sourceTree = "<group>"; };
 		18A6053623CFABDC002037CA /* StoreItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreItemController.swift; sourceTree = "<group>"; };
+		3E5937A129836E810028C320 /* StoreItemTableViewDiffableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreItemTableViewDiffableDataSource.swift; sourceTree = "<group>"; };
+		3E5937A32983711B0028C320 /* StoreItemCollectionViewSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreItemCollectionViewSectionHeader.swift; sourceTree = "<group>"; };
+		3E8EEEF12982DEAF005C7212 /* SearchScope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScope.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,8 @@
 		18A6051023CF9802002037CA = {
 			isa = PBXGroup;
 			children = (
+				3E5937A32983711B0028C320 /* StoreItemCollectionViewSectionHeader.swift */,
+				3E5937A129836E810028C320 /* StoreItemTableViewDiffableDataSource.swift */,
 				18A6051B23CF9802002037CA /* iTunesSearch */,
 				18A6051A23CF9802002037CA /* Products */,
 			);
@@ -72,6 +80,7 @@
 			children = (
 				18A6052A23CF9803002037CA /* Info.plist */,
 				18A6051C23CF9802002037CA /* AppDelegate.swift */,
+				3E8EEEF12982DEAF005C7212 /* SearchScope.swift */,
 				1821479023F60428005B6EFE /* ItemDisplaying.swift */,
 				18A6053223CF9ADA002037CA /* ItemTableViewCell.swift */,
 				1821478E23F602F3005B6EFE /* ItemCollectionViewCell.swift */,
@@ -159,12 +168,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				18A6053323CF9ADA002037CA /* ItemTableViewCell.swift in Sources */,
+				3E8EEEF22982DEB0005C7212 /* SearchScope.swift in Sources */,
 				1812E9A323F36978009BBFA7 /* StoreItemCollectionViewController.swift in Sources */,
 				18A6053523CFABBB002037CA /* StoreItem.swift in Sources */,
 				1821478F23F602F3005B6EFE /* ItemCollectionViewCell.swift in Sources */,
 				1821479123F60428005B6EFE /* ItemDisplaying.swift in Sources */,
+				3E5937A42983711B0028C320 /* StoreItemCollectionViewSectionHeader.swift in Sources */,
 				18A6053723CFABDC002037CA /* StoreItemController.swift in Sources */,
 				18A6053123CF9829002037CA /* StoreItemListTableViewController.swift in Sources */,
+				3E5937A229836E810028C320 /* StoreItemTableViewDiffableDataSource.swift in Sources */,
 				18A6051D23CF9802002037CA /* AppDelegate.swift in Sources */,
 				18A6051F23CF9802002037CA /* SceneDelegate.swift in Sources */,
 				1812E9A123F35901009BBFA7 /* StoreItemContainerViewController.swift in Sources */,

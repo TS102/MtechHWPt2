@@ -66,4 +66,6 @@ class AddEditEmojiTableViewController: UITableViewController {
         let usage = usageTextField.text ?? ""
         emoji = Emoji(symbol: symbol, name: name, description: description, usage: usage)
     }
+    
+    
 }
