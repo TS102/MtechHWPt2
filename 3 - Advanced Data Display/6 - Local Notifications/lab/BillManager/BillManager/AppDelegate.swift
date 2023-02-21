@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         
         let remindAction = UNNotificationAction(identifier: remindActionID, title: "Payment", options: [.authenticationRequired])
-        // unnotification action
+        
         let markAsPaidAction = UNNotificationAction(identifier: markAsPaidAction, title: "Paid", options: [.authenticationRequired])
         
         

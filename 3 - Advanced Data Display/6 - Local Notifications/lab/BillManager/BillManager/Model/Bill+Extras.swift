@@ -54,7 +54,7 @@ extension Bill {
             // making the content if authorization if granted
             let content = UNMutableNotificationContent()
             content.title = "Bill Reminder"
-            content.body = "amount due is \(updatedBill.amount ?? 0) to \(updatedBill.payee ?? "") on \(updatedBill.dueDate ?? date) "
+            content.body = "amount due is \(updatedBill.amount ?? 0) to \(updatedBill.payee ?? "") on \(updatedBill.dueDate ?? date)"
             content.categoryIdentifier = Bill.notificationCategoryID
         
             

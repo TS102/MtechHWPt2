@@ -54,7 +54,7 @@ class SearchTableViewController: UITableViewController {
     func getResults() {
         let searchText = searchBar.text ?? ""
         
-        let InfoRequest = DataInfoRequest(searchText: searchText)
+        let InfoRequest = DataInfoRevquest(searchText: searchText)
         
         Task {
             do {

@@ -34,7 +34,7 @@ func sendRequest<Request: APiRequest>(_ request: Request) async throws -> Reques
 
 
 // MARK: For the detail tableview controller
-struct DataInfoRequest: APiRequest {
+struct DataInfoRevquest: APiRequest {
     var searchText: String
     
     var urlRequest: URLRequest {
