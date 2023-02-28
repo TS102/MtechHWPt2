@@ -35,7 +35,7 @@ class AthleteFormViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateView()
+//        updateView()
         // Do any additional setup after loading the view.
     }
     

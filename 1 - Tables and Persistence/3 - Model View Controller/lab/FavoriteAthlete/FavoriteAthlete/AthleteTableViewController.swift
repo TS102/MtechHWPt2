@@ -21,7 +21,7 @@ class AthleteTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: PropertyKeys.athleteCell, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "AthleteCell", for: indexPath)
         
         let athlete = athletes[indexPath.row]
         var content = cell.defaultContentConfiguration()
@@ -33,8 +33,7 @@ class AthleteTableViewController: UITableViewController {
     }
 
     @IBAction func unWind(_ segue: UIStoryboardSegue) {
-        guard
-            let athleteFormViewController =
+        guard let athleteFormViewController =
                segue.source as? AthleteFormViewController,
             let athlete = athleteFormViewController.athlete
         else {
@@ -44,6 +43,7 @@ class AthleteTableViewController: UITableViewController {
             athletes[selectedIndexPath.row] = athlete
         } else {
             athletes.append(athlete)
+            print("Athlete added")
         }
 
     }
