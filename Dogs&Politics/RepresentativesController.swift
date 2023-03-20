@@ -30,6 +30,4 @@ class RepItemsController {
         print(searchResponse.results)
         return searchResponse.results
     }
-    
-
 }
